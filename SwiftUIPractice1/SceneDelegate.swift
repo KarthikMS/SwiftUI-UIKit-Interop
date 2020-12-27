@@ -8,6 +8,8 @@
 import UIKit
 import SwiftUI
 
+let appConfig = AppConfig(uiRenderingFramework: .swiftUI)
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 

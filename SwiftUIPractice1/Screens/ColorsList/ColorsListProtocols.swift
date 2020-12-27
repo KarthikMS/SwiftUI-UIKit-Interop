@@ -8,5 +8,5 @@
 protocol ColorsListRouter {
     var view: Any { get set }
     
-    func navigateToColorDetailView(viewModel: ColorViewModel)
+    func navigateToColorDetailView(colorInfo: ColorInfo)
 }

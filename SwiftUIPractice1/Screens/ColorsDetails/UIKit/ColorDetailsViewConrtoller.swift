@@ -7,23 +7,28 @@
 
 import UIKit
 
-final class ColorDetailsViewController: UIViewController {
+final class ColorDetailsViewController: UIViewController, ColorDetailView {
     // MARK: - Subviews
     private lazy var colorNameLabel: UILabel = {
         let colorNameLabel = UILabel()
         
         colorNameLabel.textColor = .white
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(textTapped))
+        colorNameLabel.addGestureRecognizer(tapGesture)
+        colorNameLabel.isUserInteractionEnabled = true
+        
         colorNameLabel.translatesAutoresizingMaskIntoConstraints = false
         
         return colorNameLabel
     }()
     
     // MARK: - Properties
-    let colorViewModel: ColorViewModel
+    let viewModel: ColorDetailViewModel
     
     // MARK: - Init
-    init(colorViewModel: ColorViewModel) {
-        self.colorViewModel = colorViewModel
+    init(viewModel: ColorDetailViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -37,9 +42,9 @@ extension ColorDetailsViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = colorViewModel.color
+        view.backgroundColor = viewModel.colorInfo.color
         addSubviews()
-        colorNameLabel.text = colorViewModel.name
+        colorNameLabel.text = viewModel.colorInfo.name
     }
 }
 
@@ -51,5 +56,20 @@ private extension ColorDetailsViewController {
             colorNameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             colorNameLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
+    }
+}
+
+// MARK: - Actions
+private extension ColorDetailsViewController {
+    @objc func textTapped() {
+        viewModel.textTapped()
+    }
+}
+
+// MARK: - ColorDetailView
+extension ColorDetailsViewController {
+    var backgroundColor: UIColor? {
+        get { view.backgroundColor }
+        set { view.backgroundColor = newValue }
     }
 }

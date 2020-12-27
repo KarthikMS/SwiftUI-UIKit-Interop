@@ -19,8 +19,8 @@ extension ColorsListUIKitRouter {
         set { viewController = newValue as? UIViewController }
     }
     
-    func navigateToColorDetailView(viewModel: ColorViewModel) {
-        let colorDetailViewController = ColorDetailViewAssembler.createInstance(colorViewModel: viewModel) as! UIViewController
+    func navigateToColorDetailView(colorInfo: ColorInfo) {
+        let colorDetailViewController = ColorDetailScreenAssembler.createInstance(colorInfo: colorInfo) as! UIViewController
         
         viewController?.navigationController?.pushViewController(colorDetailViewController, animated: true)
     }

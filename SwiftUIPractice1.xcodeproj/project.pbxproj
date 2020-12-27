@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2504F05A2598C3CC002FA6F2 /* ColorsListScreenAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2504F0592598C3CC002FA6F2 /* ColorsListScreenAssembler.swift */; };
-		2504F05E2598C5AA002FA6F2 /* ColorsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2504F05D2598C5AA002FA6F2 /* ColorsListRouter.swift */; };
+		2504F05E2598C5AA002FA6F2 /* ColorsListUIKitRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2504F05D2598C5AA002FA6F2 /* ColorsListUIKitRouter.swift */; };
 		2504F0652598C5E0002FA6F2 /* ColorDetailsViewConrtoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2504F0642598C5E0002FA6F2 /* ColorDetailsViewConrtoller.swift */; };
 		2504F0692598C766002FA6F2 /* ColorDetailViewAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2504F0682598C766002FA6F2 /* ColorDetailViewAssembler.swift */; };
+		2504F06C2598C954002FA6F2 /* ColorsListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2504F06B2598C954002FA6F2 /* ColorsListProtocols.swift */; };
 		25B094222598C10E00C47477 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B094212598C10E00C47477 /* AppDelegate.swift */; };
 		25B094242598C10E00C47477 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B094232598C10E00C47477 /* SceneDelegate.swift */; };
 		25B094262598C10E00C47477 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B094252598C10E00C47477 /* ContentView.swift */; };
@@ -23,9 +24,10 @@
 
 /* Begin PBXFileReference section */
 		2504F0592598C3CC002FA6F2 /* ColorsListScreenAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsListScreenAssembler.swift; sourceTree = "<group>"; };
-		2504F05D2598C5AA002FA6F2 /* ColorsListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsListRouter.swift; sourceTree = "<group>"; };
+		2504F05D2598C5AA002FA6F2 /* ColorsListUIKitRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsListUIKitRouter.swift; sourceTree = "<group>"; };
 		2504F0642598C5E0002FA6F2 /* ColorDetailsViewConrtoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDetailsViewConrtoller.swift; sourceTree = "<group>"; };
 		2504F0682598C766002FA6F2 /* ColorDetailViewAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDetailViewAssembler.swift; sourceTree = "<group>"; };
+		2504F06B2598C954002FA6F2 /* ColorsListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsListProtocols.swift; sourceTree = "<group>"; };
 		25B0941E2598C10E00C47477 /* SwiftUIPractice1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPractice1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25B094212598C10E00C47477 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25B094232598C10E00C47477 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,9 +120,9 @@
 			isa = PBXGroup;
 			children = (
 				2504F0592598C3CC002FA6F2 /* ColorsListScreenAssembler.swift */,
+				2504F06B2598C954002FA6F2 /* ColorsListProtocols.swift */,
 				25B0943D2598C2D000C47477 /* UIKit */,
 				25B094392598C18200C47477 /* ColorsListViewModel.swift */,
-				2504F05D2598C5AA002FA6F2 /* ColorsListRouter.swift */,
 			);
 			path = ColorsList;
 			sourceTree = "<group>";
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				25B094362598C14700C47477 /* ColorsListViewController.swift */,
+				2504F05D2598C5AA002FA6F2 /* ColorsListUIKitRouter.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -204,7 +207,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2504F05A2598C3CC002FA6F2 /* ColorsListScreenAssembler.swift in Sources */,
-				2504F05E2598C5AA002FA6F2 /* ColorsListRouter.swift in Sources */,
+				2504F06C2598C954002FA6F2 /* ColorsListProtocols.swift in Sources */,
+				2504F05E2598C5AA002FA6F2 /* ColorsListUIKitRouter.swift in Sources */,
 				25B094222598C10E00C47477 /* AppDelegate.swift in Sources */,
 				25B0943A2598C18200C47477 /* ColorsListViewModel.swift in Sources */,
 				25B094242598C10E00C47477 /* SceneDelegate.swift in Sources */,

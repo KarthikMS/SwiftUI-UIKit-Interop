@@ -14,10 +14,12 @@ final class ColorsListScreenAssembler {
         let viewController = ColorsListViewController()
         viewController.viewModel = viewModel
         
-        let router = ColorsListRouter()
+        var router: ColorsListRouter
+        router = ColorsListUIKitRouter()
+        
         viewModel.router = router
         
-        router.viewController = viewController
+        router.view = viewController
         
         let navController = UINavigationController(rootViewController: viewController)
         return navController
